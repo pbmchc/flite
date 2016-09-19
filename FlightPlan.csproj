@@ -126,7 +126,6 @@
     <Resource Include="TestFiles\PlanLotu.xml">
       <SubType>Designer</SubType>
     </Resource>
-    <Resource Include="TestFiles\PlanLotu.xslt" />
     <Resource Include="Map\banner.png" />
     <Content Include="Map\Flite.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
