@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="PlanLotu.xslt" ?>
+<!DOCTYPE PlanLotu SYSTEM "PlanLotu.dtd">
+<!--<PlanLotu nr="131" xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> -->
+  <PlanLotu nr="1827">
+  <Lot>
+  <DaneIdentyfikacyjne>
+    <DataWprowadzenia>2015-06-01</DataWprowadzenia>
+    <NazwaPrzewoznika>UnivAir</NazwaPrzewoznika>
+    <KodLotu>AIB777</KodLotu>
+    <TypLotu>pasażerski</TypLotu>
+    <CzasTrwania>1h37m</CzasTrwania>
+  </DaneIdentyfikacyjne>
+  <Wylot>
+  <PlanowyCzasWylotu>2015-06-02 15:00:00 GMT</PlanowyCzasWylotu>
+  <LotniskoWylotu>Gdansk Airport</LotniskoWylotu>
+  </Wylot>
+  <Przylot>
+  <PlanowyCzasPrzylotu>2015-06-02 16:37:00 GMT</PlanowyCzasPrzylotu>
+  <LotniskoPrzylotu>Warsaw Airport</LotniskoPrzylotu>
+  </Przylot>
+</Lot>
+<Samolot>
+  <ModelSamolotu>Airbus A380</ModelSamolotu>
+  <RokProdukcji>2010</RokProdukcji>
+  <LiczbaSilnikow>4</LiczbaSilnikow>
+  <Osiagi>
+  <Predkosc>
+    <Maksymalna jednostka="kph">1020</Maksymalna>
+    <Przelotowa jednostka="kph">945</Przelotowa>
+  </Predkosc>
+  <Pulap jednostka="m">13144</Pulap>
+  <Zasieg jednostka="km">15200</Zasieg>
+  </Osiagi>
+  <LiczbaMiejsc>453</LiczbaMiejsc>
+  <Waga>
+    <WagaBezPaliwa jednostka="lb">290000</WagaBezPaliwa>
+    <CalkowitaWagaStartowa jednostka="lb">451355</CalkowitaWagaStartowa>
+    <CalkowitaWagaKoncowa jednostka="lb">294700</CalkowitaWagaKoncowa>
+    <Paliwo>
+    <WagaPoczatkowa jednostka="lb">161355</WagaPoczatkowa>
+    <Rezerwa jednostka="lb">4700</Rezerwa>
+    </Paliwo>
+  </Waga>
+    <Pilot>
+      <ImieNazwisko>Peter Parker</ImieNazwisko>
+      <PrzelataneGodziny>10200</PrzelataneGodziny>
+      <Stanowisko>Pierwszy pilot</Stanowisko>
+    </Pilot>
+    <Pilot>
+      <ImieNazwisko>Tim Flyer</ImieNazwisko>
+      <PrzelataneGodziny>10200</PrzelataneGodziny>
+      <Stanowisko>Drugi pilot</Stanowisko>
+    </Pilot>   
+</Samolot>
+<Trasa>
+  <PunktOrientacyjny idPunktu="1">
+    <NazwaPunktu>GDA</NazwaPunktu>
+    <Wspolrzedne latitude="54.377043" longitude="18.472990"></Wspolrzedne>
+    <CzestotliwoscRadiowa>118.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">0</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>0m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>1h37m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="2">
+    <NazwaPunktu>F1</NazwaPunktu>
+    <Wspolrzedne latitude="54.299610" longitude="18.587962"></Wspolrzedne>
+    <CzestotliwoscRadiowa>120.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">1700</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>2m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>1h35m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+ <PunktOrientacyjny idPunktu="3">
+    <NazwaPunktu>F2</NazwaPunktu>
+    <Wspolrzedne latitude="54.151925" longitude="18.737659"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">2600</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>3m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>1h34m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+   <PunktOrientacyjny idPunktu="4">
+    <NazwaPunktu>F3</NazwaPunktu>
+    <Wspolrzedne latitude="53.712547" longitude="19.328592"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">8500</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>12m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>1h25m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="5">
+    <NazwaPunktu>F4</NazwaPunktu>
+    <Wspolrzedne latitude="53.175624" longitude="20.412988"></Wspolrzedne>
+    <CzestotliwoscRadiowa>112.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">8500</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>40m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>57m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="6">
+    <NazwaPunktu>F6</NazwaPunktu>
+    <Wspolrzedne latitude="52.829688" longitude="21.000914"></Wspolrzedne>
+    <CzestotliwoscRadiowa>111.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">13100</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>50m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>47m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="7">
+    <NazwaPunktu>F6</NazwaPunktu>
+    <Wspolrzedne latitude="52.453117" longitude="21.255682"></Wspolrzedne>
+    <CzestotliwoscRadiowa>109.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">13100</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>55m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>42m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="8">
+    <NazwaPunktu>F7</NazwaPunktu>
+    <Wspolrzedne latitude="52.267050" longitude="21.242559"></Wspolrzedne>
+    <CzestotliwoscRadiowa>100.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">13100</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h05m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>32m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="9">
+    <NazwaPunktu>F8</NazwaPunktu>
+    <Wspolrzedne latitude="52.110978" longitude="21.166829"></Wspolrzedne>
+    <CzestotliwoscRadiowa>101.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">3500</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h15m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>22m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="10">
+    <NazwaPunktu>F9</NazwaPunktu>
+    <Wspolrzedne latitude="52.104652" longitude="20.986241"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">3000</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h20m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>17m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+    <PunktOrientacyjny idPunktu="11">
+    <NazwaPunktu>F10</NazwaPunktu>
+    <Wspolrzedne latitude="52.137958" longitude="20.912084"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">2500</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h25m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>12m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="12">
+    <NazwaPunktu>F11</NazwaPunktu>
+    <Wspolrzedne latitude="52.175450" longitude="20.906591"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">1800</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h27m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>10m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="13">
+    <NazwaPunktu>F12</NazwaPunktu>
+    <Wspolrzedne latitude="52.190186" longitude="20.922383"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">1500</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h28m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>9m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="14">
+    <NazwaPunktu>F13</NazwaPunktu>
+    <Wspolrzedne latitude="52.193974" longitude="20.953969"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">1200</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h30m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>7m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+    <PunktOrientacyjny idPunktu="15">
+    <NazwaPunktu>F14</NazwaPunktu>
+    <Wspolrzedne latitude="52.188502" longitude="20.960149"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">800</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h32m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>5m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="16">
+    <NazwaPunktu>F15</NazwaPunktu>
+    <Wspolrzedne latitude="52.182187" longitude="20.963582"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">500</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h34m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>3m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+  <PunktOrientacyjny idPunktu="17">
+    <NazwaPunktu>WAW</NazwaPunktu>
+    <Wspolrzedne latitude="52.175029" longitude="20.962895"></Wspolrzedne>
+    <CzestotliwoscRadiowa>110.6</CzestotliwoscRadiowa>
+    <Wysokosc jednostka="m">0</Wysokosc>
+    <CzasLotu>
+      <AktualnyCzasLotu>1h37m</AktualnyCzasLotu>
+      <PozostalyCzasLotu>0m</PozostalyCzasLotu>
+    </CzasLotu>
+  </PunktOrientacyjny>
+</Trasa>
+<WarunkiPogodowe>
+    <Wiatr>
+      <Kierunek jednostka="dg">305</Kierunek>
+      <Sila jednostka="kph">90</Sila>
+    </Wiatr>
+    <Temperatura jednostka="C">-7.0</Temperatura>
+    <Opady>tak</Opady>
+    <Burze>nie</Burze>
+  </WarunkiPogodowe>
+  </PlanLotu>

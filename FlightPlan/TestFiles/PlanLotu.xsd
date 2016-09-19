@@ -1,0 +1,315 @@
+﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PlanLotu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Lot" />
+        <xs:element ref="Samolot" />
+        <xs:element ref="Trasa" />
+        <xs:element ref="WarunkiPogodowe" />
+      </xs:sequence>
+      <xs:attribute name="nr" type="xs:positiveInteger" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DaneIdentyfikacyjne" />
+        <xs:element ref="Wylot" />
+        <xs:element ref="Przylot" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DaneIdentyfikacyjne">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DataWprowadzenia" />
+        <xs:element ref="NazwaPrzewoznika" />
+        <xs:element ref="KodLotu" />
+        <xs:element ref="TypLotu" />
+        <xs:element ref="CzasTrwania" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataWprowadzenia" type="xs:date" />
+  <xs:element name="NazwaPrzewoznika" type="xs:string" />
+  <xs:element name="KodLotu" type="xs:string" />
+  <xs:element name="TypLotu" type="rodzajLotu" />
+  <xs:simpleType name="rodzajLotu">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="pasażerski" />
+      <xs:enumeration value="towarowy" />
+      <xs:enumeration value="wojskowy"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CzasTrwania" type="xs:string" />
+  <xs:element name="Wylot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PlanowyCzasWylotu" />
+        <xs:element ref="LotniskoWylotu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlanowyCzasWylotu" type="xs:string" />
+  <xs:element name="LotniskoWylotu" type="xs:string" />
+  <xs:element name="Przylot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PlanowyCzasPrzylotu" />
+        <xs:element ref="LotniskoPrzylotu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlanowyCzasPrzylotu" type="xs:string" />
+  <xs:element name="LotniskoPrzylotu" type="xs:string" />
+  <xs:element name="Samolot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ModelSamolotu" />
+        <xs:element ref="RokProdukcji" />
+        <xs:element ref="LiczbaSilnikow" />
+        <xs:element ref="Osiagi" />
+        <xs:element ref="LiczbaMiejsc" />
+        <xs:element ref="Waga" />
+        <xs:element minOccurs="1" maxOccurs="2" ref="Pilot" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModelSamolotu" type="xs:string" />
+  <xs:element name="RokProdukcji" type="xs:short" />
+  <xs:element name="LiczbaSilnikow" type="xs:byte" />
+  <xs:element name="Osiagi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Predkosc" />
+        <xs:element ref="Pulap" />
+        <xs:element ref="Zasieg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Predkosc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Maksymalna" />
+        <xs:element ref="Przelotowa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Maksymalna">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="kph" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Przelotowa">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="kph" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pulap">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="m" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Zasieg">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="km" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LiczbaMiejsc" type="xs:short" />
+  <xs:element name="Waga">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="WagaBezPaliwa" />
+        <xs:element ref="CalkowitaWagaStartowa" />
+        <xs:element ref="CalkowitaWagaKoncowa" />
+        <xs:element ref="Paliwo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WagaBezPaliwa">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="lb" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalkowitaWagaStartowa">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="lb" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalkowitaWagaKoncowa">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="lb" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Paliwo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="WagaPoczatkowa" />
+        <xs:element ref="Rezerwa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WagaPoczatkowa">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="lb" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rezerwa">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="lb" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pilot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ImieNazwisko" />
+        <xs:element ref="PrzelataneGodziny" />
+        <xs:element ref="Stanowisko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImieNazwisko" type="xs:string" />
+  <xs:element name="PrzelataneGodziny" type="xs:positiveInteger" />
+  <xs:element name="Stanowisko" type="occupation" />
+  <xs:simpleType name="occupation">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Pierwszy pilot"></xs:enumeration>
+      <xs:enumeration value="Drugi pilot"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Trasa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="PunktOrientacyjny" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PunktOrientacyjny">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="NazwaPunktu" />
+        <xs:element ref="Wspolrzedne" />
+        <xs:element ref="CzestotliwoscRadiowa" />
+        <xs:element ref="Wysokosc" />
+        <xs:element ref="CzasLotu" />
+      </xs:sequence>
+      <xs:attribute name="idPunktu" type="xs:byte" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NazwaPunktu" type="xs:string" />
+  <xs:element name="Wspolrzedne">
+    <xs:complexType>
+      <xs:attribute name="latitude" type="xs:decimal" use="required" />
+      <xs:attribute name="longitude" type="xs:decimal" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CzestotliwoscRadiowa" type="xs:decimal" />
+  <xs:element name="Wysokosc">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="m" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CzasLotu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AktualnyCzasLotu" />
+        <xs:element ref="PozostalyCzasLotu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AktualnyCzasLotu" type="xs:string" />
+  <xs:element name="PozostalyCzasLotu" type="xs:string" />
+  <xs:element name="WarunkiPogodowe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Wiatr" />
+        <xs:element ref="Temperatura" />
+        <xs:element ref="Opady" />
+        <xs:element ref="Burze" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Wiatr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Kierunek" />
+        <xs:element ref="Sila" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Kierunek">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="dg" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sila">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="kph" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Temperatura">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal">
+          <xs:attribute fixed="C" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Opady" type="binaryDec" />
+  <xs:element name="Burze" type="binaryDec" />
+  <xs:simpleType name="binaryDec">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="tak"></xs:enumeration>
+      <xs:enumeration value="nie"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

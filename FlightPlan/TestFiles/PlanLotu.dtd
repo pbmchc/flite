@@ -1,0 +1,69 @@
+﻿<!ELEMENT PlanLotu (Lot,Samolot,Trasa,WarunkiPogodowe)>
+<!ATTLIST PlanLotu nr CDATA #REQUIRED>
+<!ELEMENT Lot (DaneIdentyfikacyjne,Wylot,Przylot)>
+<!ELEMENT DaneIdentyfikacyjne (DataWprowadzenia,NazwaPrzewoznika,KodLotu,TypLotu,CzasTrwania)>
+<!ELEMENT DataWprowadzenia (#PCDATA)>
+<!ELEMENT NazwaPrzewoznika (#PCDATA)>
+<!ELEMENT KodLotu (#PCDATA)>
+<!ELEMENT TypLotu (#PCDATA)>
+<!ELEMENT CzasTrwania (#PCDATA)>
+<!ELEMENT Wylot (PlanowyCzasWylotu,LotniskoWylotu)>
+<!ELEMENT PlanowyCzasWylotu (#PCDATA)>
+<!ELEMENT LotniskoWylotu (#PCDATA)>
+<!ELEMENT Przylot (PlanowyCzasPrzylotu,LotniskoPrzylotu)>
+<!ELEMENT PlanowyCzasPrzylotu (#PCDATA)>
+<!ELEMENT LotniskoPrzylotu (#PCDATA)>
+<!ELEMENT Samolot (ModelSamolotu,RokProdukcji,LiczbaSilnikow,Osiagi,LiczbaMiejsc,Waga,Pilot+)>
+<!ELEMENT ModelSamolotu (#PCDATA)>
+<!ELEMENT RokProdukcji (#PCDATA)>
+<!ELEMENT LiczbaSilnikow (#PCDATA)>
+<!ELEMENT Osiagi (Predkosc,Pulap,Zasieg)>
+<!ELEMENT Predkosc (Maksymalna,Przelotowa)>
+<!ELEMENT Maksymalna (#PCDATA)>
+<!ATTLIST Maksymalna jednostka CDATA #FIXED "kph">
+<!ELEMENT Przelotowa (#PCDATA)>
+<!ATTLIST Przelotowa jednostka CDATA #FIXED "kph">
+<!ELEMENT Pulap (#PCDATA)>
+<!ATTLIST Pulap jednostka CDATA #FIXED "m">
+<!ELEMENT Zasieg (#PCDATA)>
+<!ATTLIST Zasieg jednostka CDATA #FIXED "km">
+<!ELEMENT LiczbaMiejsc (#PCDATA)>
+<!ELEMENT Waga (WagaBezPaliwa,CalkowitaWagaStartowa,CalkowitaWagaKoncowa, Paliwo)>
+<!ELEMENT WagaBezPaliwa (#PCDATA)>
+<!ATTLIST WagaBezPaliwa jednostka CDATA #FIXED "lb">
+<!ELEMENT CalkowitaWagaStartowa (#PCDATA)>
+<!ATTLIST CalkowitaWagaStartowa jednostka CDATA #FIXED "lb">
+<!ELEMENT CalkowitaWagaKoncowa (#PCDATA)>
+<!ATTLIST CalkowitaWagaKoncowa jednostka CDATA #FIXED "lb">
+<!ELEMENT Paliwo (WagaPoczatkowa,Rezerwa)>
+<!ELEMENT WagaPoczatkowa (#PCDATA)>
+<!ATTLIST WagaPoczatkowa jednostka CDATA #FIXED "lb">
+<!ELEMENT Rezerwa (#PCDATA)>
+<!ATTLIST Rezerwa jednostka CDATA #FIXED "lb">
+<!ELEMENT Pilot (ImieNazwisko,PrzelataneGodziny,Stanowisko)>
+<!ELEMENT ImieNazwisko (#PCDATA)>
+<!ELEMENT PrzelataneGodziny (#PCDATA)>
+<!ELEMENT Stanowisko (#PCDATA)>
+<!ELEMENT Trasa (PunktOrientacyjny+)>
+<!ELEMENT PunktOrientacyjny (NazwaPunktu,Wspolrzedne,CzestotliwoscRadiowa,Wysokosc,CzasLotu)>
+<!ATTLIST PunktOrientacyjny idPunktu CDATA #IMPLIED>
+<!ELEMENT NazwaPunktu (#PCDATA)>
+<!ELEMENT Wspolrzedne EMPTY>
+<!ATTLIST Wspolrzedne latitude CDATA #REQUIRED>
+<!ATTLIST Wspolrzedne longitude CDATA #REQUIRED>
+<!ELEMENT CzestotliwoscRadiowa (#PCDATA)>
+<!ELEMENT Wysokosc (#PCDATA)>
+<!ATTLIST Wysokosc jednostka CDATA #FIXED "m">
+<!ELEMENT CzasLotu (AktualnyCzasLotu,PozostalyCzasLotu)>
+<!ELEMENT AktualnyCzasLotu (#PCDATA)>
+<!ELEMENT PozostalyCzasLotu (#PCDATA)>
+<!ELEMENT WarunkiPogodowe (Wiatr,Temperatura,Opady,Burze)>
+<!ELEMENT Wiatr (Kierunek,Sila)>
+<!ELEMENT Kierunek (#PCDATA)>
+<!ATTLIST Kierunek jednostka CDATA #FIXED "dg">
+<!ELEMENT Sila (#PCDATA)>
+<!ATTLIST Sila jednostka CDATA #FIXED "kph">
+<!ELEMENT Temperatura (#PCDATA)>
+<!ATTLIST Temperatura jednostka CDATA #FIXED "C">
+<!ELEMENT Opady (#PCDATA)>
+<!ELEMENT Burze (#PCDATA)>

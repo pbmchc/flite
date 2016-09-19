@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        html {
+            height: 100%;
+            font-family: Tahoma;
+        }
+
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        h1
+        {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #contener
+        {
+            height: 100%;
+            width: 20%;
+            background: #ffffcc;
+            float: left;
+            visibility:hidden;
+            text-align:center;
+
+        }
+        #logo
+        {
+            width: 100%;
+            vertical-align:bottom;
+            margin-bottom: 10px;
+        }
+        #googleMap {
+            height: 100%;
+            width: 100%;
+            right:0;
+            position: absolute;
+            top: 0;
+        
+        }
+        #mapContainer {
+            height: 100%;
+            width: 80%;
+            right:0;
+            position: absolute;
+            top: 0;
+        
+        }
+        #overlay{
+            position:absolute;
+            height:100%;
+            width:100%;
+            background-color: black;
+        }
+
+        #overlayContent{
+            height: 40%;
+            width: 40%;
+            background-color: white;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            padding: 20px;
+        }
+
+        #overlayContent p {
+            display:inline-block;
+            margin-left: 10px;
+        }
+        #overlayContent p:nth-of-type(odd)
+        {
+            font-weight:bold;
+        }
+        #pointName{
+            text-align:center;
+        }
+
+        #terminator{
+            position:absolute;
+            right: 2%;
+            top: 2%;
+            width: 25px;
+            height:25px;
+            text-align:center;
+            vertical-align:middle;
+            padding:0px;
+            font-weight: bold;
+        }
+        
+     
+    </style>
+    <title></title>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="Map_code.js"></script>
+
+</head>
+
+<body>
+    <div id="contener">
+        <div>
+            <img id="logo" src="Flite.png" />
+        </div>
+        <div>
+        <h1>PRZEWOŹNIK</h1>
+        <p id="przewoznik"></p>
+        <h1>KOD LOTU</h1>
+        <p id="kodLotu"></p>
+        <h1>CZAS TRWANIA</h1>
+        <p id="czasTrwania"></p>
+        <h1>SAMOLOT</h1>
+        <p id="samolot"></p>
+        <h1>PILOCI</h1>
+        <p id="piloci"></p>
+            </div>   
+    </div>
+    <div id="mapContainer">
+        <div id="googleMap"></div>
+        <div style="display:none; opacity:0;" id="overlay">
+        </div>
+        <div style="display:none; opacity:0;" id="overlayContent">
+            <h2 id="pointName"></h2>
+            <p>Częstotliwość: </p><p id="pointFreq"></p><br />
+            <p>Wysokość: </p><p id="pointHeight"></p><br />
+            <p>Czas lotu: </p><p id="pointTime"></p><br />
+            <p>Pozostały czas: </p><p id="pointTimeRem"></p><br />
+            <button id="terminator">X</button>
+        </div>
+    </div>
+    <script>
+        var terminator = document.getElementById('terminator');
+        var overlay = document.getElementById('overlay');
+        terminator.onclick = hide;
+        overlay.onclick = hide;
+
+        function hide()
+        {
+            var overlay = document.getElementById('overlay');
+            var content = document.getElementById('overlayContent');
+            fade(overlay);
+            fade(content);
+        }
+
+        function fade(element) {
+            var op = window.getComputedStyle(element).opacity;
+            var timer = setInterval(function () {
+                if (op <= 0.1) {
+                    clearInterval(timer);
+                    element.style.display = 'none';
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op -= op * 0.1;
+            }, 10);
+        }
+    </script>
+</body>
+
+</html>
